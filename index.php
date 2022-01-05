@@ -17,9 +17,11 @@
 </head>
 
     <!--Log in-->
+      
     <form method="POST" action="#" class="form-signin">
+      
   <body class="text-center" style="background-color: #FEF5ED;">
-      <img class="mb-4" src="assets/logo.png" alt="Logo" width="72" height="90">
+      <img class="mb-4 text-center" src="assets/logo.png" alt="Logo" width="72" height="90">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <!--Email-->
       <label for="inputEmail" class="sr-only">Email address</label>
