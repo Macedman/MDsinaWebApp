@@ -14,5 +14,4 @@
     else {
         echo "Connected to database";
     }
-    
 ?>

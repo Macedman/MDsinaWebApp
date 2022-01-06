@@ -1,3 +1,20 @@
+<?php
+  require 'includes/dbconfig.php';
+  if (isset($_SESSION['username']))
+  {
+    ?>
+    <script>
+      window.location.href = 'dashboard.php'
+    </script> 
+    <?php
+  } 
+  else 
+  {
+
+  }
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +26,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--IziToast-->
+    <link rel="stylesheet" href="assets/modules/izitoast/css/iziToast.min.css">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -38,10 +58,31 @@
 	 <option value="D_boy">Delivery Manager</option>
 	 </select>
       <!--Submit Button-->
-      <button class="btn btn-lg btn-primary btn-block mt-3" value="Log in" type="submit">Log in</button>
+      <button class="btn btn-lg btn-primary btn-block mt-3" name="log_in" value="Log in" type="submit">Log in</button>
       <p class="mt-5 mb-3 text-muted">&copy; MDsina 2021-2022</p>
       </div>
     </form>
-  
+
+    <?php
+      if (isset($_POST['log_in']))
+       {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $h = new Common();
+        if ($_POST ['ltype'] == 'Admin')
+        {
+          $count = $h->Login($username, $password, $admin);
+          if ($count != 0) 
+          {
+            $_SESSION['username'] = $username;
+            $_SESSION['ltype'] = $_POST['ltype'];
+            ?>
+            <script src="assets/modules/izitoast/js/iziToast.min.js"></script>
+          }
+        }
+
+      }
+      
 </body>
 </html>
