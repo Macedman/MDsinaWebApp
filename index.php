@@ -1,5 +1,6 @@
 <?php
   require 'includes/dbconfig.php';
+  require 'includes/Common.php';
   if (isset($_SESSION['username']))
   {
     ?>
@@ -28,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!--IziToast-->
-    <link rel="stylesheet" href="assets/modules/izitoast/css/iziToast.min.css">
+    <link rel="stylesheet" href="assets/izitoast/css/iziToast.min">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -45,10 +46,10 @@
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <!--Email-->
       <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <!--Password-->
       <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control mt-2" placeholder="Password" required>
+      <input type="password" name="password" id="inputPassword" class="form-control mt-2" placeholder="Password" required>
       <!--Dropdown-->
       <div class="mb-3 mt-3">
 	 <select name="ltype" required>
@@ -63,26 +64,153 @@
       </div>
     </form>
 
-    <?php
-      if (isset($_POST['log_in']))
-       {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
 
-        $h = new Common();
-        if ($_POST ['ltype'] == 'Admin')
-        {
-          $count = $h->Login($username, $password, $admin);
-          if ($count != 0) 
-          {
-            $_SESSION['username'] = $username;
-            $_SESSION['ltype'] = $_POST['ltype'];
-            ?>
-            <script src="assets/modules/izitoast/js/iziToast.min.js"></script>
-          }
-        }
+    <?php 
+	if(isset($_POST['log_in']))
+	{
+	    
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+	
+	 $h = new Common();
+	 if($_POST['ltype'] == 'Admin')
+	 {
+	 $count = $h->Login($username,$password,'admin');
+ if($count != 0)
+ {
+	 $_SESSION['username'] = $username;
+	 $_SESSION['ltype'] = $_POST['ltype'];
+	 ?>
+	  <script src="assets/izitoast/css/iziToast.min"></script>
+	 <script>
+ iziToast.success({
+    title: 'Login Successfully!!',
+    message: 'Welcome Admin!!',
+    position: 'topRight'
+  });
+	 
+	 setTimeout(function(){ 
+	 window.location.href="dashboard.php"},3000);
+	 </script>
+	 <?php 
+ }
+ else 
+ {
+	 ?>
+	 <script src="assets/izitoast/css/iziToast.min"></script>
+	 <script>
+ iziToast.error({
+    title: 'Wrong Data Enter!',
+    message: 'Please Use Valid Data!!',
+    position: 'topRight'
+  });
+	 </script>
+	 <?php 
+ }
+	 }
+	 else if($_POST['ltype'] == 'Vendor')
+	 {
+		$count = $h->Login($username,$password,'vendor');
+ if($count != 0)
+ {
+	 $_SESSION['username'] = $username;
+	 $_SESSION['ltype'] = $_POST['ltype'];
+	 ?>
+	  <script src="assets/izitoast/css/iziToast.min"></script>
+	 <script>
+ iziToast.success({
+    title: 'Login Successfully!!',
+    message: 'Welcome vendor!!',
+    position: 'topRight'
+  });
+	 
+	 setTimeout(function(){ 
+	 window.location.href="dashboard.php"},3000);
+	 </script>
+	 <?php 
+ }
+ else 
+ {
+	 ?>
+	 <script src="assets/izitoast/css/iziToast.min"></script>
+	 <script>
+ iziToast.error({
+    title: 'Wrong Data Enter!',
+    message: 'Please Use Valid Data!!',
+    position: 'topRight'
+  });
+	 </script>
+	 <?php 
+ } 
+	 }
+	  else if($_POST['ltype'] == 'D_boy')
+	 {
+		$count = $h->Login($username,$password,'rider');
+ if($count != 0)
+ {
+	 $_SESSION['username'] = $username;
+	 $_SESSION['ltype'] = $_POST['ltype'];
+	 ?>
+	  <script src="assets/izitoast/css/iziToast.min"></script>
+	 <script>
+ iziToast.success({
+    title: 'Login Successfully!!',
+    message: 'Welcome Delivery Manager!!',
+    position: 'topRight'
+  });
+	 
+	 setTimeout(function(){ 
+	 window.location.href="dashboard.php"},3000);
+	 </script>
+	 <?php 
+ }
+ else 
+ {
+	 ?>
+	 <script src="assets/izitoast/css/iziToast.min"></script>
+	 <script>
+ iziToast.error({
+    title: 'Wrong Data Enter!',
+    message: 'Please Use Valid Data!!',
+    position: 'topRight'
+  });
+	 </script>
+	 <?php 
+ } 
+	 }
+	 else 
+	 {
+		 
+	 }
+		
+	}
+	?>
 
-      }
-      
+<script>
+$('input[type="text"],input[type="password"]').focus(function(){
+  $(this).prev().animate({'opacity':'1'},200)
+});
+$('input[type="text"],input[type="password"]').blur(function(){
+  $(this).prev().animate({'opacity':'.5'},200)
+});
+
+$('input[type="text"],input[type="password"]').keyup(function(){
+  if(!$(this).val() == ''){
+    $(this).next().animate({'opacity':'1','right' : '30'},200)
+  } else {
+    $(this).next().animate({'opacity':'0','right' : '20'},200)
+  }
+});
+
+var open = 0;
+$('.tab').click(function(){
+  $(this).fadeOut(200,function(){
+    $(this).parent().animate({'left':'0'})
+  });
+});
+</script>
+
+
+
 </body>
 </html>

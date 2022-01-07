@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello Dashboard!!</h1>
+    <h1>Hello Admin!!</h1>
 </body>
 </html>
