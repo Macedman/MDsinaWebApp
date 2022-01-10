@@ -29,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!--IziToast-->
-    <link rel="stylesheet" href="assets/izitoast/css/iziToast.min">
+    <link rel="stylesheet" href="assets/izitoast/css/iziToast.min.css">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -81,7 +81,7 @@
 	 $_SESSION['username'] = $username;
 	 $_SESSION['ltype'] = $_POST['ltype'];
 	 ?>
-	  <script src="assets/izitoast/css/iziToast.min"></script>
+	   <script src="assets/modules/izitoast/js/iziToast.min.js"></script>
 	 <script>
  iziToast.success({
     title: 'Login Successfully!!',
