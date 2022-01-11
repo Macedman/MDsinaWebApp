@@ -1,3 +1,8 @@
+<?php
+    require 'includes/dbconfig.php';
+    require 'includes/Common.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
