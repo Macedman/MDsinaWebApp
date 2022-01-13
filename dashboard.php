@@ -1,6 +1,6 @@
 <?php
-    require 'includes/dbconfig.php';
-    require 'includes/Common.php';
+    require 'includes/navbar.php';
+    require 'includes/sidebar.php';
 ?>
 
 <!DOCTYPE html>
