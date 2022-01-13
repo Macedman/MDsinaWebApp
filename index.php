@@ -26,7 +26,7 @@
     <link rel="shortcut icon"  href="<?php echo $set['logo'];?>">
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
 
     <!--IziToast-->
     <link rel="stylesheet" href="assets/iziToast/iziToast-master/dist/css/iziToast.min.css">
@@ -40,7 +40,6 @@
 </head>
 
     <!--Log in-->
-      
     <form method="POST" action="#" class="form-signin">
       
   <body class="text-center" style="background-color: #FEF5ED;">
@@ -60,8 +59,10 @@
 	 <option value="Vendor">Vendor(Store)</option>
 	 <option value="D_boy">Delivery Manager</option>
 	 </select>
+</div>
       <!--Submit Button-->
-      <button class="btn btn-lg btn-primary btn-block mt-3" name="loog_in" value="Log in" type="submit">Log in</button>
+      <div class="d-grid gap-2">
+      <button class="btn btn-lg btn-primary" name="loog_in" value="Log in" type="submit">Log in</button>
       <p class="mt-5 mb-3 text-muted">&copy; MDsina 2021-2022</p>
       </div>
     </form>

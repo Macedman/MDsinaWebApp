@@ -12,8 +12,5 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello Admin!!</h1>
-
-    <a href="logout.php">Logout</a>
 </body>
 </html>
