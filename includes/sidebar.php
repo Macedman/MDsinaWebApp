@@ -20,6 +20,32 @@
      </div>
    </div>
 
+
+   <li>
+        <div class="icon-link">
+        <a href="#">
+          <i class='bx bx-collection' ></i>
+          <span class="link_name">Category</span>
+        </a>
+        <i class='bx bx-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a href="">Add Category</a></li>
+          <li><a href="">List Category</a></li>
+        </ul>
+      </li>
+    
+
+      <li>
+        <div class="icon-link">
+        <a href="#">
+          <i class='bx bx-map-pin' ></i>
+          <span class="link_name">Pincode</span>
+        </a>
+        <i class='bx bx-chevron-down arrow' ></i>
+        </div>
+      </li>
+
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
