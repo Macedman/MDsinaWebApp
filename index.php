@@ -19,201 +19,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - MDsina</title>
-    <link rel="shortcut icon"  href="<?php echo $set['logo'];?>">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <!--Custom CSS-->
+  <link rel="stylesheet" href="style.css">
 
-    <!--IziToast-->
-    <link rel="stylesheet" href="assets/iziToast/iziToast-master/dist/css/iziToast.min.css">
+  <!-- Boxicons CSS -->
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!--FontAwesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+<body>
 
-    <!--Log in-->
-    <form method="POST" action="#" class="form-signin">
+  <!--Sidebar Header-->
+   <div class="sidebar">
+     <div class="logo-details">
+      <i class='bx bxl-html5'></i> 
+      <span class="logo_name">MDsina</span>
+     </div>
+   
+
+   <!--Sidebar UL-->
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="">Dashboard</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icon-link">
+        <a href="#">
+          <i class='bx bx-collection' ></i>
+          <span class="link_name">Category</span>
+        </a>
+        <i class='bx bx-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="">Category</a></li>
+          <li><a href="">Add Category</a></li>
+          <li><a href="">List Category</a></li>
+          <li><a href="">List Category</a></li>
+        </ul>
+      </li>
+    
+
+      <li>
+        <div class="icon-link">
+        <a href="#">
+          <i class='bx bx-map-pin' ></i>
+          <span class="link_name">Pincode</span>
+        </a>
+        <i class='bx bx-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="">Pincode</a></li>
+          <li><a href="">Add Pincode</a></li>
+          <li><a href="">List Pincode</a></li>
+          <li><a href="">List Category</a></li>
+          <li><a href="">List Category</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-store-alt'></i>
+          <span class="link_name">Store</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="">Store</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-package'></i>
+          <span class="link_name">Payment Gateway</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="">List Payment Gateway</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icon-link">
+        <a href="#">
+          <i class='bx bx-map-pin' ></i>
+          <span class="link_name">Rider</span>
+        </a>
+        <i class='bx bx-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="">Rider</a></li>
+          <li><a href="">Add Rider</a></li>
+          <li><a href="">List Rider</a></li>
+          <li><a href="">List Category</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-package'></i>
+          <span class="link_name">Customers</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="">Customers</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icon-link">
+        <a href="#">
+          <i class='bx bx-map-pin' ></i>
+          <span class="link_name">Testimonial</span>
+        </a>
+        <i class='bx bx-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="">Testemonial</a></li>
+          <li><a href="">Add Testemonial</a></li>
+          <li><a href="">List Testemonial</a></li>
+          <li><a href="">List Category</a></li>
+          <li><a href="">List Category</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-package'></i>
+          <span class="link_name">Order List</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="">Order List</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-package'></i>
+          <span class="link_name">Update Profile</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="">Update Profile</a></li>
+        </ul>
+      </li>
       
-  <body class="text-center" style="background-color: #FEF5ED;">
-      <img class="mb-4 text-center" src="assets/logo.png" alt="Logo" width="72" height="90">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <!--Email-->
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <!--Password-->
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" name="password" id="inputPassword" class="form-control mt-2" placeholder="Password" required>
-      <!--Dropdown-->
-      <div class="mb-3 mt-3">
-	 <select name="ltype" required>
-	 <option value="">Select Role</option>
-	 <option value="Admin">Admin</option>
-	 <option value="Vendor">Vendor(Store)</option>
-	 <option value="D_boy">Delivery Manager</option>
-	 </select>
-</div>
-      <!--Submit Button-->
-      <div class="d-grid gap-2">
-      <button class="btn btn-lg btn-primary" name="loog_in" value="Log in" type="submit">Log in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; MDsina 2021-2022</p>
+      <li>
+        <a href="#">
+          <i class='bx bx-package'></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="">Setting</a></li>
+        </ul>
+      </li>
+
+    
+      <li>
+      <div class="profile-details">
+        <div class="profile-content">
+          <img src="images/profile.jpg" alt="profile">
+        </div>
+        
+        <div class="name-job">
+          <div class="profile_name">Ec Macedaa</div>
+          <div class="job">Web Developer</div>
+        </div>
+        <i class='bx bx-log-out'></i>
       </div>
-    </form>
+    </li>
+  </ul>
+  </div>
 
-
-    <?php 
-	if(isset($_POST['loog_in']))
-	{
-	    
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-	
-	 $h = new Common();
-	 if($_POST['ltype'] == 'Admin')
-	 {
-	 $count = $h->Login($username,$password,'admin');
- if($count != 0)
- {
-	 $_SESSION['username'] = $username;
-	 $_SESSION['ltype'] = $_POST['ltype'];
-	 ?>
-	   <script src="assets/iziToast/iziToast-master/dist/js/iziToast.min.js"></script>
-	 <script>
- iziToast.success({
-    title: 'Login Successfully!!',
-    message: 'Welcome Admin!!',
-    position: 'topRight'
-  });
-	 
-	 setTimeout(function(){ 
-	 window.location.href="dashboard.php"},3000);
-	 </script>
-	 <?php 
- }
- else 
- {
-	 ?>
-	 <script src="assets/iziToast/iziToast-master/dist/js/iziToast.min.js"></script>
-	 <script>
- iziToast.error({
-    title: 'Wrong Data Enter!',
-    message: 'Please Use Valid Data!!',
-    position: 'topRight'
-  });
-	 </script>
-	 <?php 
- }
-	 }
-	 else if($_POST['ltype'] == 'Vendor')
-	 {
-		$count = $h->Login($username,$password,'vendor');
- if($count != 0)
- {
-	 $_SESSION['username'] = $username;
-	 $_SESSION['ltype'] = $_POST['ltype'];
-	 ?>
-	  <script src="assets/iziToast/iziToast-master/dist/js/iziToast.min.js"></script>
-	 <script>
- iziToast.success({
-    title: 'Login Successfully!!',
-    message: 'Welcome vendor!!',
-    position: 'topRight'
-  });
-	 
-	 setTimeout(function(){ 
-	 window.location.href="dashboard.php"},3000);
-	 </script>
-	 <?php 
- }
- else 
- {
-	 ?>
-	 <script src="assets/iziToast/iziToast-master/dist/js/iziToast.min.js"></script>
-	 <script>
- iziToast.error({
-    title: 'Wrong Data Enter!',
-    message: 'Please Use Valid Data!!',
-    position: 'topRight'
-  });
-	 </script>
-	 <?php 
- } 
-	 }
-	  else if($_POST['ltype'] == 'D_boy')
-	 {
-		$count = $h->Login($username,$password,'rider');
- if($count != 0)
- {
-	 $_SESSION['username'] = $username;
-	 $_SESSION['ltype'] = $_POST['ltype'];
-	 ?>
-	  <script src="assets/iziToast/iziToast-master/dist/js/iziToast.min.js"></script>
-	 <script>
- iziToast.success({
-    title: 'Login Successfully!!',
-    message: 'Welcome Delivery Manager!!',
-    position: 'topRight'
-  });
-	 
-	 setTimeout(function(){ 
-	 window.location.href="dashboard.php"},3000);
-	 </script>
-	 <?php 
- }
- else 
- {
-	 ?>
-	 <script src="assets/iziToast/iziToast-master/dist/js/iziToast.min.js"></script>
-	 <script>
- iziToast.error({
-    title: 'Wrong Data Enter!',
-    message: 'Please Use Valid Data!!',
-    position: 'topRight'
-  });
-	 </script>
-	 <?php 
- } 
-	 }
-	 else 
-	 {
-		 
-	 }
-		
-	}
-	?>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu'></i>
+      <span class="text">Drop Down Sidebar</span>
+    </div>
+  </section>
 
 <script>
-$('input[type="text"],input[type="password"]').focus(function(){
-  $(this).prev().animate({'opacity':'1'},200)
-});
-$('input[type="text"],input[type="password"]').blur(function(){
-  $(this).prev().animate({'opacity':'.5'},200)
-});
+    let arrow = document.querySelectorAll(".arrow");
+    console.log(arrow);
 
-$('input[type="text"],input[type="password"]').keyup(function(){
-  if(!$(this).val() == ''){
-    $(this).next().animate({'opacity':'1','right' : '30'},200)
-  } else {
-    $(this).next().animate({'opacity':'0','right' : '20'},200)
-  }
-});
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e)=>{
+        let arrowParent = e.target.parentElement.parentElement;
+        
+        arrowParent.classList.toggle("showMenu");
 
-var open = 0;
-$('.tab').click(function(){
-  $(this).fadeOut(200,function(){
-    $(this).parent().animate({'left':'0'})
-  });
-});
+      });
+    }
+
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+    });
+
 </script>
-
-
-
+  
 </body>
 </html>
