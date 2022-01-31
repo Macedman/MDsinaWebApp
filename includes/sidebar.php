@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/iziToast/iziToast-master/dist/css/iziToast.min.css">
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/sidebar.css" rel="stylesheet">
 
   <!--Boxicons-->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
@@ -176,7 +176,7 @@
           <div class="profile_name">Ec Macedaa</div>
           <div class="job">Web Developer</div>
         </div>
-        <i class='bx bx-log-out'></i>
+        <a href="logout.php"><i class='bx bx-log-out'></i></a>
       </div>
     </li>
   </ul>
@@ -213,5 +213,3 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
