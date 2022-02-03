@@ -254,7 +254,7 @@
 
 .home-section {
     position: relative;
-    background: #E4E9F7;
+    background-color: #E4E9F7;
     height: 100vh;
     left: 260px;
     width: calc(100% - 260px);
@@ -287,3 +287,10 @@
     font-size: 26px;
     font-weight: 600;
 }
+
+/*Delete only code under this comment*/
+.home-section .home-content .first-card {
+    margin-top: 150px;
+}
+
+/*Delete only code above this comment*/

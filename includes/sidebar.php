@@ -10,6 +10,9 @@
   <!--IziToast-->
   <link rel="stylesheet" href="assets/iziToast/iziToast-master/dist/css/iziToast.min.css">
 
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
   <!-- Custom styles for this template -->
   <link href="css/sidebar.css" rel="stylesheet">
 
@@ -185,9 +188,20 @@
   <section class="home-section">
     <div class="home-content">
       <i class='bx bx-menu'></i>
-      <span class="text">Drop Down Sidebar</span>
+      <span class="text"></span>
+      <!--bootstrap cards-->
+      <div class="first-card">
+      <div class="card">
+        <div class="card-body">
+          Dashboard
+        </div>
+      </div>
+      </div>
+      
+      <!--delete only code from top of this comment-->
     </div>
   </section>
+    
 
 <script>
     let arrow = document.querySelectorAll(".arrow");
